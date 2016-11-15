@@ -1,0 +1,16 @@
+number = (1..100).to_a.sample
+guesses = 0
+puts "Pick a number 1-100:"
+user_input = gets.chomp.to_i
+guesses += 1
+until user_input == number
+  if user_input > number
+    puts "too high"
+  else
+    puts "too low"
+  end
+  guesses +=1
+  puts "Guess again!"
+  user_input = gets.chomp.to_i
+end
+puts "Awesome!You took #{guesses} of guesses."
